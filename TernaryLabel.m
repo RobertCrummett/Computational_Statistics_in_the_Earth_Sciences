@@ -1,0 +1,19 @@
+function [h] = TernaryLabel(x,y,z)
+%Places labels on the x, y and z axes of a ternary diagram
+if nargout == 0
+   text(0.85, sqrt(3)/4 + 0.05, x, 'horizontalalignment', ...
+       'center', 'rotation', -60, 'FontSize', 16, 'FontWeight', 'bold')
+   text(0.5, -0.075, y, 'horizontalalignment', 'center', 'FontSize', 16, ...
+       'FontWeight', 'bold')
+   text(0.15, sqrt(3)/4 + 0.05, z, 'horizontalalignment', ...
+       'center', 'rotation', 60, 'FontSize', 16, 'FontWeight', 'bold')
+else
+   h = zeros(1, 3);
+   h(1) = text(0.85, sqrt(3)/4 + 0.05, x, 'horizontalalignment', ...
+       'center', 'rotation', -60, 'FontSize', 16, 'FontWeight', 'bold');
+   h(2) = text(0.5, -0.075, y, 'horizontalalignment', 'center', ...
+       'FontSize', 16, 'FontWeight', 'bold');
+   h(3) = text(0.15, sqrt(3)/4 + 0.05, z, 'horizontalalignment', ...
+       'center', 'rotation', 60, 'FontSize', 16, 'FontWeight', 'bold');
+end
+end
